@@ -1,82 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AtherOS - Web OS</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AtherOS</title>
+    <style>
+        /* 样式部分 */
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .icon-container {
+            text-align: center;
+            margin: 20px;
+        }
+        .icon-container img {
+            width: 100px;
+            height: 100px;
+        }
+    </style>
 </head>
 <body>
+    <!-- 文件 -->
+    <div class="icon-container">
+        <a href="#">
+            <img src="https://cdn-icons-png.flaticon.com/512/5576/5576886.png" alt="终端机">
+            <p>终端</p>
+        </a>
+    </div>
 
-  <!-- 桌面背景 -->
-  <div class="desktop">
-    <!-- 桌面图标 -->
-    <div class="icon" onclick="openWindow('file-manager')">
-      <img src="assets/images/folder-icon.png" alt="Files">
-      <span>Files</span>
+    <!-- 浏览器 -->
+    <div class="icon-container">
+        <a href="#">
+            <img src="https://cdn-icons-png.flaticon.com/512/5576/5576886.png" alt="浏览器">
+            <p>浏览器</p>
+        </a>
     </div>
-    <div class="icon" onclick="openWindow('browser')">
-      <img src="assets/images/browser-icon.png" alt="Browser">
-      <span>Browser</span>
-    </div>
-  </div>
 
-  <!-- Dock 栏 -->
-  <div class="dock">
-    <div class="dock-icon" onclick="openWindow('terminal')">
-      <img src="assets/images/terminal-icon.png" alt="Terminal">
+    <!-- 文件 -->
+    <div class="icon-container">
+        <a href="#">
+            <img src="https://cdn-icons-png.flaticon.com/512/5576/5576886.png" alt="文件">
+            <p>文件</p>
+        </a>
     </div>
-    <div class="dock-icon" onclick="openWindow('settings')">
-      <img src="assets/images/settings-icon.png" alt="Settings">
-    </div>
-  </div>
-
-  <!-- 文件管理器窗口 -->
-  <div id="file-manager" class="window" style="display:none;">
-    <div class="window-header">
-      <span>File Manager</span>
-      <button onclick="closeWindow('file-manager')">X</button>
-    </div>
-    <div class="window-body">
-      <p>Here are your files...</p>
-    </div>
-  </div>
-
-  <!-- 浏览器窗口 -->
-  <div id="browser" class="window" style="display:none;">
-    <div class="window-header">
-      <span>Browser</span>
-      <button onclick="closeWindow('browser')">X</button>
-    </div>
-    <div class="window-body">
-      <p>This is your web browser...</p>
-    </div>
-  </div>
-
-  <!-- 终端窗口 -->
-  <div id="terminal" class="window" style="display:none;">
-    <div class="window-header">
-      <span>Terminal</span>
-      <button onclick="closeWindow('terminal')">X</button>
-    </div>
-    <div class="window-body">
-      <pre>$ Welcome to AtherOS terminal...</pre>
-    </div>
-  </div>
-
-  <!-- 设置窗口 -->
-  <div id="settings" class="window" style="display:none;">
-    <div class="window-header">
-      <span>Settings</span>
-      <button onclick="closeWindow('settings')">X</button>
-    </div>
-    <div class="window-body">
-      <p>Settings page under construction...</p>
-    </div>
-  </div>
-
-  <!-- JavaScript -->
-  <script src="script.js"></script>
 </body>
 </html>
-
